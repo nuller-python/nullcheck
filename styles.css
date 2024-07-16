@@ -13,7 +13,8 @@ body {
 }
 
 video {
-    width: 50vw; /* 50% of the viewport width */
+    width: 45vw; /* 50% of the viewport width */
+    height: 50vh;
     height: auto; /* Maintain aspect ratio */
     position: absolute; /* Ensure the video is behind other content */
     top: 50%;
@@ -23,7 +24,7 @@ video {
     object-fit: cover; /* Cover the specified dimensions */
 }
 
-h1, button, #warning-popup, #social-popup, #instagram-popup {
+h1, button, #warning-popup, #social-popup, #instagram-popup, #no-instagram-popup {
     position: relative;
     z-index: 1; /* Ensure content is above the video */
 }
@@ -47,43 +48,51 @@ button {
     margin-top: 20px;
 }
 
-#warning-popup, #social-popup, #instagram-popup {
+#warning-popup, #social-popup, #instagram-popup, #no-instagram-popup {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%; /* Decreased from 80% */
-    max-width: 350px; /* Decreased from 400px */
+    width: 76%;
+    max-width: 375px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    padding: 15px; /* Decreased from 20px */
+    padding: 17.5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     z-index: 2;
     text-align: center;
 }
 
-#close-btn, #proceed-btn {
+#close-btn, #proceed-btn, #close-final-btn {
     margin-top: 20px;
     background-color: #ff6347;
     color: white;
-    width: 90%; /* Decreased width slightly */
+    width: 96.5%;
     padding: 10px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
 }
 
-#credentials p {
-    font-size: 16px;
-    margin: 10px 0;
+#social-popup {
+    background-image: url('placeholder.jpg'); /* Replace 'placeholder.jpg' with your background image */
+    background-size: cover;
+    background-position: center;
 }
 
-#credentials button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    font-size: 14px;
+p {
+    color: black;
+}
+
+button.copy-btn {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
     cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
 }
 
 @media (max-width: 768px) {
@@ -97,7 +106,7 @@ button {
         padding: 12px 20px;
     }
 
-    #warning-popup, #social-popup, #instagram-popup {
+    #warning-popup, #social-popup, #instagram-popup, #no-instagram-popup {
         width: 90%;
     }
 }
@@ -113,7 +122,7 @@ button {
         padding: 10px 18px;
     }
 
-    #warning-popup, #social-popup, #instagram-popup {
+    #warning-popup, #social-popup, #instagram-popup, #no-instagram-popup {
         width: 95%;
     }
 }

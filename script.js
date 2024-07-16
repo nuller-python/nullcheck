@@ -8,7 +8,10 @@ function proceedToSocial() {
 }
 
 function closePopup() {
+    document.getElementById('warning-popup').style.display = 'none';
     document.getElementById('social-popup').style.display = 'none';
+    document.getElementById('instagram-popup').style.display = 'none';
+    document.getElementById('no-instagram-popup').style.display = 'none';
 }
 
 function handleInstagram() {
@@ -22,16 +25,15 @@ function hasInstagram() {
 }
 
 function noInstagram() {
-    document.getElementById('credentials').style.display = 'block';
+    document.getElementById('instagram-popup').style.display = 'none';
+    document.getElementById('no-instagram-popup').style.display = 'block';
 }
 
 function copyToClipboard(elementId) {
-    var copyText = document.getElementById(elementId).textContent;
-    var tempInput = document.createElement('input');
-    tempInput.value = copyText;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempInput);
-    alert('Copied: ' + copyText);
+    const text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Copied to clipboard');
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
 }
