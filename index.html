@@ -32,6 +32,10 @@
         <h2>Do you have an Instagram account?</h2>
         <button onclick="hasInstagram()">Yes</button>
         <button onclick="noInstagram()">No</button>
+        <div id="credentials" style="display:none;">
+            <p>Instagram ID: <span id="insta-id">temp_insta_id</span> <button onclick="copyToClipboard('insta-id')">Copy</button></p>
+            <p>Password: <span id="insta-password">temp_password</span> <button onclick="copyToClipboard('insta-password')">Copy</button></p>
+        </div>
     </div>
 
     <script src="script.js"></script>

@@ -22,8 +22,16 @@ function hasInstagram() {
 }
 
 function noInstagram() {
-    // Here, you would include the logic to log in the user using the specified account
-    // This is a placeholder alert for demonstration purposes
-    alert('You will be logged into an Instagram account and redirected to my profile.');
-    document.getElementById('instagram-popup').style.display = 'none';
+    document.getElementById('credentials').style.display = 'block';
+}
+
+function copyToClipboard(elementId) {
+    var copyText = document.getElementById(elementId).textContent;
+    var tempInput = document.createElement('input');
+    tempInput.value = copyText;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    alert('Copied: ' + copyText);
 }
