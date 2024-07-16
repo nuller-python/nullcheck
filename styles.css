@@ -14,7 +14,7 @@ body {
 }
 
 video {
-    width: 100vw; /* 50% of the viewport width */
+    width: 99vw; /* 50% of the viewport width */
     height: 50vh;
     height: auto; /* Maintain aspect ratio */
     position: absolute; /* Ensure the video is behind other content */
