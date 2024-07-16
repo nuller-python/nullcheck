@@ -9,20 +9,18 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width:100vw;
     text-align: center;
 }
 
 video {
-    width: 99vw; /* 50% of the viewport width */
-    height: 50vh;
-    height: auto; /* Maintain aspect ratio */
-    position: absolute; /* Ensure the video is behind other content */
+    position: absolute;
     top: 50%;
     left: 50%;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensure video covers the whole area */
     transform: translate(-50%, -50%);
     z-index: -1; /* Keep video behind other content */
-    object-fit: cover; /* Cover the specified dimensions */
 }
 
 h1, button, #warning-popup, #social-popup, #instagram-popup, #no-instagram-popup {
