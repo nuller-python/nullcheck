@@ -28,7 +28,7 @@ function hasInstagram() {
 }
 
 function proceedToInstagram() {
-    window.open('https://instagram.com/yourprofile', '_blank');
+    window.open('https://www.instagram.com/test.null.2024/', '_blank');
     document.getElementById('additional-warning-popup').style.display = 'none';
 }
 
