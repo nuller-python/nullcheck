@@ -12,6 +12,8 @@ function closePopup() {
     document.getElementById('social-popup').style.display = 'none';
     document.getElementById('instagram-popup').style.display = 'none';
     document.getElementById('no-instagram-popup').style.display = 'none';
+    document.getElementById('additional-warning-popup').style.display = 'none';
+    document.getElementById('additional-warning-popup-no').style.display = 'none';
 }
 
 function handleInstagram() {
@@ -20,12 +22,22 @@ function handleInstagram() {
 }
 
 function hasInstagram() {
-    window.open('https://instagram.com/yourprofile', '_blank');
     document.getElementById('instagram-popup').style.display = 'none';
+    document.getElementById('additional-warning-popup').style.display = 'block';
+}
+
+function proceedToInstagram() {
+    window.open('https://instagram.com/yourprofile', '_blank');
+    document.getElementById('additional-warning-popup').style.display = 'none';
 }
 
 function noInstagram() {
     document.getElementById('instagram-popup').style.display = 'none';
+    document.getElementById('additional-warning-popup-no').style.display = 'block';
+}
+
+function proceedToNoInstagram() {
+    document.getElementById('additional-warning-popup-no').style.display = 'none';
     document.getElementById('no-instagram-popup').style.display = 'block';
 }
 

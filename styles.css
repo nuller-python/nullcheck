@@ -9,23 +9,24 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width:100vw;
     text-align: center;
 }
 
 video {
+    width: 99vw;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    object-fit: cover; /* Ensure video covers the whole area */
     transform: translate(-50%, -50%);
-    z-index: -1; /* Keep video behind other content */
+    z-index: -1;
+    object-fit: cover;
 }
 
-h1, button, #warning-popup, #social-popup, #instagram-popup, #no-instagram-popup {
+h1, button, .temp-message, .popup {
     position: relative;
-    z-index: 1; /* Ensure content is above the video */
+    z-index: 1;
 }
 
 h1 {
@@ -47,7 +48,16 @@ button {
     margin-top: 20px;
 }
 
-#warning-popup, #social-popup, #instagram-popup, #no-instagram-popup {
+.temp-message {
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.popup {
     display: none;
     position: fixed;
     top: 50%;
@@ -61,9 +71,21 @@ button {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     z-index: 2;
     text-align: center;
+    animation: popup-appear 0.3s ease-out;
 }
 
-#close-btn, #proceed-btn, #close-final-btn {
+@keyframes popup-appear {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+#close-btn, #proceed-btn, #close-final-btn, #proceed-instagram-btn, #proceed-no-instagram-btn {
     margin-top: 20px;
     background-color: #ff6347;
     color: white;
@@ -75,7 +97,7 @@ button {
 }
 
 #social-popup {
-    background-image: url('placeholder.jpg'); /* Replace 'placeholder.jpg' with your background image */
+    background-image: url('placeholder.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -105,7 +127,7 @@ button.copy-btn {
         padding: 12px 20px;
     }
 
-    #warning-popup, #social-popup, #instagram-popup, #no-instagram-popup {
+    .popup {
         width: 90%;
     }
 }
@@ -121,7 +143,7 @@ button.copy-btn {
         padding: 10px 18px;
     }
 
-    #warning-popup, #social-popup, #instagram-popup, #no-instagram-popup {
+    .popup {
         width: 95%;
     }
 }
