@@ -9,12 +9,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width:100vw;
+    width: 100vw;
     text-align: center;
 }
 
 video {
-    width: 100vw;
+    width: 99vw;
     height: auto;
     position: absolute;
     top: 50%;
@@ -48,15 +48,6 @@ button {
     margin-top: 20px;
 }
 
-.temp-message {
-    color: white;
-    font-size: 16px;
-    margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
 .popup {
     display: none;
     position: fixed;
@@ -65,7 +56,7 @@ button {
     transform: translate(-50%, -50%);
     width: 76%;
     max-width: 375px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #add8e6; /* Cotton candy-like background */
     border-radius: 10px;
     padding: 17.5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -96,14 +87,8 @@ button {
     border-radius: 5px;
 }
 
-#social-popup {
-    background-image: url('placeholder.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
 p {
-    color: black;
+    color: black; /* Black text color */
 }
 
 button.copy-btn {

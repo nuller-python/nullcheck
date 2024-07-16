@@ -14,6 +14,7 @@ function closePopup() {
     document.getElementById('no-instagram-popup').style.display = 'none';
     document.getElementById('additional-warning-popup').style.display = 'none';
     document.getElementById('additional-warning-popup-no').style.display = 'none';
+    document.getElementById('details-popup').style.display = 'none';
 }
 
 function handleInstagram() {
@@ -48,4 +49,8 @@ function copyToClipboard(elementId) {
     }).catch(err => {
         console.error('Failed to copy: ', err);
     });
+}
+
+function openDetails() {
+    document.getElementById('details-popup').style.display = 'block';
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Mobile Page</title>
+    <title>My Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,25 +12,24 @@
         Your browser does not support the video tag.
     </video>
 
-    <h1>Welcome to My Page</h1>
+    <h1>HI !.....So if you are here you just completed the forms</h1>
     <button onclick="openWarning()">Discover More</button>
-
-    <p class="temp-message">This is a temporary message.</p>
+    <button onclick="openDetails()">Kindly read before clicking</button>
 
     <div id="warning-popup" class="popup">
-        <h2>Warning</h2>
-        <p>This is a multi-line warning message. Please read it carefully before proceeding to the social media page.</p>
+        <h2>alert</h2>
+        <p>ok apdina kenji kekuren yar kitayum share panadhinga</p>
         <button id="proceed-btn" onclick="proceedToSocial()">Proceed</button>
     </div>
 
     <div id="social-popup" class="popup">
-        <h2>Social Media</h2>
-        <p>Follow me on <a href="#" onclick="handleInstagram()">Instagram</a></p>
+        <h2>social media</h2>
+        <p>intha link press panunga <a href="#" onclick="handleInstagram()">Instagram</a></p>
         <button id="close-btn" onclick="closePopup()">Close</button>
     </div>
 
     <div id="instagram-popup" class="popup">
-        <h2>Do you have an Instagram account?</h2>
+        <h2>Do you have an Instagram account? </h2>
         <button onclick="hasInstagram()">Yes</button>
         <button onclick="noInstagram()">No</button>
     </div>
@@ -44,14 +43,20 @@
 
     <div id="additional-warning-popup" class="popup">
         <h2>Additional Warning</h2>
-        <p>Please be aware of your privacy while using Instagram.</p>
+        <p>ok so unga kita insta irukuna intha id ku oru hi aprm unga name send panunga</p>
         <button id="proceed-instagram-btn" onclick="proceedToInstagram()">Proceed</button>
     </div>
 
     <div id="additional-warning-popup-no" class="popup">
         <h2>Additional Warning</h2>
-        <p>Please read the temporary ID and password carefully before proceeding.</p>
+        <p>ok unga kita illana venum na intha id use panikonga(cuz ithu nan safe ah iruklam nobody knows abt this) plus illa unglku venam na note la eludhi veinga please</p>
         <button id="proceed-no-instagram-btn" onclick="proceedToNoInstagram()">Proceed</button>
+    </div>
+
+    <div id="details-popup" class="popup">
+        <h2>Kindly read</h2>
+        <p>ok so unglku nan yaru nu teriyum nah antha instructions follow panunga illa vendam nu nenachniga na intha note ah anga bench adila vechidunga nan ungla disturb panna maten .neenga form fill panitu intha step complete panalana enaku teriyathu enna reason ku vendam  nu so mudinja note la eludhi veinga </p>
+        <button onclick="closePopup()">Close</button>
     </div>
 
     <script src="script.js"></script>
